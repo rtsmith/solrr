@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+        name: index
+        labels:
+                app: solrr.net
+spec:
+        replicas: 1
+        selector:
+                matchLabels:
+                        app: solrr.net
+        template:
+                metadata:
+                        labels:
+                                app: solrr.net
+                spec:
+                        containers:
+                        - name: frontend
+                          image: turok/default-frontend
+                          ports:
+                          - containerPort: 80

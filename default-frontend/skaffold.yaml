@@ -1,0 +1,11 @@
+apiVersion: skaffold/v1beta13
+kind: Config
+build:
+  artifacts:
+  - image: turok/default-frontend
+deploy:
+  kubectl:
+    manifests:
+    - k8s/deploy.yaml
+    - k8s/ingress.yaml
+    - k8s/service.yaml

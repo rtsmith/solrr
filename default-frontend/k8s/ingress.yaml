@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: frontend
+spec:
+  rules:
+  - host: solrr.net
+    http:
+      paths:
+      - backend:
+          serviceName: default-frontend
+          servicePort: 80
