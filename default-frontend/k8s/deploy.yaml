@@ -16,6 +16,6 @@ spec:
                 spec:
                         containers:
                         - name: frontend
-                          image: turok/default-frontend
+                          image: turok/default-frontend:7a74c52-dirty
                           ports:
                           - containerPort: 80
