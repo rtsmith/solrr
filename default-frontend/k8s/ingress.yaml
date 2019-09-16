@@ -2,9 +2,10 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: frontend
+  namespace: beta
 spec:
   rules:
-  - host: solrr.net
+  - host: beta.solrr.net
     http:
       paths:
       - backend:

@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
         name: index
+        namespace: beta
         labels:
                 app: solrr.net
 spec:
@@ -16,6 +17,6 @@ spec:
                 spec:
                         containers:
                         - name: frontend
-                          image: turok/default-frontend
+                          image: turok/default-frontend:326d175-dirty-e7a1c24
                           ports:
                           - containerPort: 80
